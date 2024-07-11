@@ -1,9 +1,9 @@
-#aleatorio=random.randit(menor,mayor)
-import random
+import os
+import time
+from funciones import*
 
-sueldos=[]
-trabajadores=["Juan Pérez","María García","Carlos López","Ana Martínez","Pedro Rodríguez","Laura Hernández","Miguel Sánchez","Isabel Gómez","Francisco Díaz","Elena Fernández"]
 while True:
+    os.system('cls')
     print("MENU DE EMPRESA")
     print("1. SUELDOS ALEATORIOS")
     print("2. CLASIFICAR SUELDOS")
@@ -12,20 +12,19 @@ while True:
     print("5. SALIR DEL PROGRAMA")
     opc=int(input("ingrese opcion: "))
     if opc==1:
-        for x in range(10):
-            aleatorio=random.randint(300000,2500000)
-            sueldos.append(aleatorio)
-            print(sueldos)
+        os.system('cls')
+        opc_1()
     elif opc==2:
-        sueldos.sort
-        print(sueldos)
-        print(f"sueldo mas alto: {sueldos[-1]}")
-        print(f"sueldo mas bajo: {sueldos[0]}")
-        print(f"promedio de sueldos: {sum(sueldos)/10}")
+        os.system('cls')
+        print("sueldos menores a $800000 total",)
     elif opc==3:
-        pass
+        os.system('cls')
+        opc_3()
+        media_geometrica()
     elif opc==4:
-        pass
-    else:
+        os.system('cls')
+        opc_4()
+    else:    
         print("adios")
-        print("")
+        break
+    time.sleep(3)
